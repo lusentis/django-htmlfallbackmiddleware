@@ -11,7 +11,7 @@ Manual install
 
 easy_install
 
-	easdy_install django-htmlfallbackmiddleware
+	easy_install django-htmlfallbackmiddleware
 
 ## Setup
 
