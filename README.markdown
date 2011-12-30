@@ -6,7 +6,7 @@ For each HTTP request, if no url can handle it, searches for a suitable template
 
 Manual install
 
-	git clone https://github.com/lusentis/django-stylus/
+	git clone https://github.com/lusentis/django-htmlfallbackmiddleware
 	python setup.py install
 
 Pypi
@@ -15,20 +15,19 @@ Pypi
 
 ## Setup
 
-Add `htmlfallbackmiddleware.middleware.HTMLFallbackMiddleware` to your `settings.MIDDLEWARE_CLASSES`
+Put `htmlfallbackmiddleware.middleware.HTMLFallbackMiddleware` at the end of your `settings.MIDDLEWARE_CLASSES` list
 
     MIDDLEWARE_CLASSES = (
       ...
       'htmlfallbackmiddleware.middleware.HTMLFallbackMiddleware',
-      ...      
     ) 
 
 
 ## Template name resolution
 
-If no `urlpattern` matches the current request url (e.g. /myapp/list), then:
+If no `urlpattern` matches the current request url (e.g. `/myapp/list`), then:
 
-1. If the template /myapp/list.html exists then render it and stop
-2. If the template /list.html exists then render it and stop
-3. Else raise Http404
+1. if the template `myapp/list.html` exists then render it and stop
+2. if the template `list.html` exists then render it and stop
+3. else raise Http404
 
