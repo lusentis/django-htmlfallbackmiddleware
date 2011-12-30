@@ -9,9 +9,9 @@ Manual install
 	git clone https://github.com/lusentis/django-htmlfallbackmiddleware
 	python setup.py install
 
-Pypi
+easy_install
 
-	pypi install 'https://github.com/lusentis/django-htmlfallbackmiddleware/zipball/master'
+	easdy_install django-htmlfallbackmiddleware
 
 ## Setup
 
